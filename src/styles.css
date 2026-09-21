@@ -192,7 +192,12 @@
 footer { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 2.5rem; padding: 2.3rem clamp(1.25rem,7vw,7.5rem); color: var(--primary-foreground); background: oklch(0.105 0.027 230); }
 footer .sany-logo { width: 6.5rem; min-height: 0; }
 footer p { max-width: 45rem; margin: 0; color: oklch(1 0 0 / .48); font-size: .65rem; line-height: 1.5; }
-footer > a:last-child { display: flex; align-items: center; gap: .4rem; color: var(--primary-foreground); font-size: .7rem; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+.footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: .6rem; }
+.footer-right > a:first-child { display: flex; align-items: center; gap: .4rem; color: var(--primary-foreground); font-size: .7rem; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+.poweredBy { display: inline-flex; align-items: center; gap: .45rem; padding: .35rem .6rem; color: oklch(1 0 0 / .55); background: oklch(1 0 0 / .08); font-size: .62rem; font-weight: 600; text-decoration: none; border-radius: var(--radius-sm); transition: color .25s ease, background .25s ease; }
+.poweredBy:hover { color: var(--primary-foreground); background: oklch(1 0 0 / .14); }
+.creditLogo { display: inline-flex; align-items: center; justify-content: center; }
+.creditLogo svg { width: auto; height: .7rem; fill: currentColor; }
 
 .reveal { opacity: 0; transform: translateY(2.25rem); transition: opacity .75s ease,transform .75s cubic-bezier(.2,.75,.2,1); }
 .reveal .stage-media { opacity: 0; transform: translateX(-2rem); transition: opacity .75s .08s ease, transform .75s .08s cubic-bezier(.2,.75,.2,1), box-shadow .5s ease; }
