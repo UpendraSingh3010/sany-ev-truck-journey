@@ -76,7 +76,7 @@
 
 .site-header { position: relative; z-index: 50; width: 100%; }
 .utility-bar { min-height: 5.2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: .75rem clamp(1.25rem,7vw,7.5rem); color: var(--primary-foreground); background: var(--surface-dark); }
-.sany-logo { display: inline-flex; align-items: center; justify-content: center; width: 8.8rem; min-height: 3.05rem; padding: .55rem 1.1rem; background: var(--card); text-decoration: none; transition: transform .3s ease, box-shadow .3s ease; }
+.sany-logo { display: inline-flex; align-items: center; justify-content: center; width: 7rem; aspect-ratio: 400 / 130; padding: 0; background: transparent; text-decoration: none; transition: transform .3s ease, box-shadow .3s ease; }
 .sany-logo img { width: 100%; height: auto; object-fit: contain; }
 .sany-logo:hover { transform: translateY(-2px); box-shadow: 0 .55rem 1.5rem oklch(0 0 0 / .2); }
 .utility-actions { display: flex; align-items: center; gap: 2rem; }
@@ -126,11 +126,12 @@
 .stage-section:nth-child(even) .stage-media { order: 2; }
 .stage-media { position: relative; min-height: 31rem; overflow: hidden; background: var(--card); border: 1px solid var(--border); box-shadow: 0 1rem 2.5rem oklch(0 0 0 / .06); transition: transform .5s cubic-bezier(.2,.75,.2,1), box-shadow .5s ease; }
 .stage-media::after { content: ""; position: absolute; inset: 0; pointer-events: none; border: 0 solid var(--primary); transition: border-width .35s ease; }
-.stage-media img { width: 100%; height: 31rem; object-fit: cover; transition: transform .75s cubic-bezier(.2,.75,.2,1), filter .5s ease; }
+.stage-media img { width: 100%; height: 31rem; transition: transform .75s cubic-bezier(.2,.75,.2,1), filter .5s ease; }
+.stage-image-cover { object-fit: cover; }
+.stage-image-contain { object-fit: contain; object-position: center; padding: 1.5rem; }
 .stage-section:hover .stage-media { transform: translateY(-6px); box-shadow: 0 1.6rem 3.4rem oklch(0 0 0 / .13); }
 .stage-section:hover .stage-media::after { border-width: 4px; }
 .stage-section:hover .stage-media img { transform: scale(1.035); filter: saturate(1.05); }
-.stage-section:nth-child(3n+1) .stage-media img { object-fit: contain; padding: 1.5rem; }
 .image-caption { position: absolute; left: 0; bottom: 0; display: flex; align-items: stretch; color: var(--primary-foreground); background: var(--surface-dark); }
 .image-caption span { display: grid; min-width: 4.1rem; place-items: center; background: var(--primary); font-size: 1.2rem; font-weight: 800; transition: min-width .3s ease; }
 .stage-section:hover .image-caption span { min-width: 5rem; }
@@ -189,7 +190,7 @@
 .success-panel small { margin-bottom: 2rem; color: var(--muted-foreground); }
 
 footer { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 2.5rem; padding: 2.3rem clamp(1.25rem,7vw,7.5rem); color: var(--primary-foreground); background: oklch(0.105 0.027 230); }
-footer .sany-logo { min-width: 6.5rem; min-height: 2.4rem; font-size: 1.45rem; }
+footer .sany-logo { width: 6.5rem; min-height: 0; }
 footer p { max-width: 45rem; margin: 0; color: oklch(1 0 0 / .48); font-size: .65rem; line-height: 1.5; }
 footer > a:last-child { display: flex; align-items: center; gap: .4rem; color: var(--primary-foreground); font-size: .7rem; font-weight: 700; text-decoration: none; text-transform: uppercase; }
 
@@ -206,7 +207,7 @@ footer > a:last-child { display: flex; align-items: center; gap: .4rem; color: v
 
 @media (max-width: 900px) {
   .utility-bar { min-height: 4.4rem; }
-  .sany-logo { width: 7.2rem; min-height: 2.7rem; }
+  .sany-logo { width: 7rem; min-height: 0; }
   .utility-actions > span { display: none; }
   .utility-actions .inline-flex { min-height: 2.7rem; padding-inline: 1rem; }
   .nav-bar { min-height: 3.7rem; }
@@ -226,6 +227,7 @@ footer > a:last-child { display: flex; align-items: center; gap: .4rem; color: v
   .reveal.is-visible .stage-media { transform: none; }
   .stage-section:nth-child(even) .stage-media { order: initial; }
   .stage-media, .stage-media img { min-height: 25rem; height: 25rem; }
+  .stage-image-contain { padding: 1rem; }
   .system-band { gap: 2rem; }
   footer { grid-template-columns: 1fr; }
 }
@@ -243,6 +245,7 @@ footer > a:last-child { display: flex; align-items: center; gap: .4rem; color: v
   .spec-strip span { font-size: .55rem; }
   .intro-band, .stage-section, .system-band, .quote-section { padding-inline: 1.25rem; }
   .stage-media, .stage-media img { min-height: 19rem; height: 19rem; }
+  .stage-image-contain { padding: .75rem; }
   .comparison-row { grid-template-columns: 6rem 1fr; }
   .stage-heading { gap: .8rem; }
   .quote-form { grid-template-columns: 1fr; padding: 1.3rem; }
