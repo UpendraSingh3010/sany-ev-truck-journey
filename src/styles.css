@@ -235,6 +235,12 @@ footer p { max-width: 45rem; margin: 0; color: oklch(1 0 0 / .48); font-size: .6
   .stage-image-contain { padding: 1rem; }
   .system-band { gap: 2rem; }
   footer { grid-template-columns: 1fr; }
+  .footer-right { align-items: flex-start; }
+}
+
+@media (max-width: 768px) {
+  .poweredBy { padding: 6px 10px; gap: 8px; }
+  .creditLogo svg { height: 10px; }
 }
 
 @media (max-width: 560px) {
