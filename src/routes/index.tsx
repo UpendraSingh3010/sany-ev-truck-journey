@@ -185,7 +185,21 @@ function Index() {
         <QuoteForm />
       </section>
 
-      <footer><a href="#top" className="sany-logo" aria-label="Back to top"><img src={sanyLogo.url} alt="SANY" /></a><p>Product information shown is based on the supplied campaign brief. Specifications may vary by model and configuration.</p><a href="https://www.sany.in/" target="_blank" rel="noreferrer">Visit SANY India <ArrowRight size={14} /></a></footer>
+      <footer>
+        <a href="#top" className="sany-logo" aria-label="Back to top"><img src={sanyLogo.url} alt="SANY" /></a>
+        <p>Product information shown is based on the supplied campaign brief. Specifications may vary by model and configuration.</p>
+        <div className="footer-right">
+          <a href="https://www.sany.in/" target="_blank" rel="noreferrer">Visit SANY India <ArrowRight size={14} /></a>
+          <a href="https://lovable.dev" target="_blank" rel="noreferrer" className="poweredBy">
+            <span className="creditLogo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z" />
+              </svg>
+            </span>
+            <span>Made with Lovable</span>
+          </a>
+        </div>
+      </footer>
     </main>
   );
 }
