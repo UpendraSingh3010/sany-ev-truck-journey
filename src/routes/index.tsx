@@ -21,11 +21,15 @@ import {
 import { Button } from "@/components/ui/button";
 import cargoTruck from "@/assets/sany-cargo-truck.jpeg.asset.json";
 import flatbedTruck from "@/assets/sany-flatbed-truck.png.asset.json";
-import highwayDistant from "@/assets/sany-highway-distant.png.asset.json";
 import highwayHero from "@/assets/sany-highway-hero.png.asset.json";
 import cockpit from "@/assets/sany-cockpit.webp.asset.json";
 import loadedTruck from "@/assets/sany-loaded-truck.webp.asset.json";
 import tipperTruck from "@/assets/sany-tipper-truck.jpeg.asset.json";
+import truckLineup from "@/assets/sany-truck-lineup.png.asset.json";
+import containerMountain from "@/assets/sany-container-mountain.png.asset.json";
+import dcCharging from "@/assets/sany-dc-charging.png.asset.json";
+import regenerativeBraking from "@/assets/sany-regenerative-braking.png.asset.json";
+import sanyLogo from "@/assets/sany-official-logo.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -55,15 +59,15 @@ type Stage = {
 };
 
 const stages: Stage[] = [
-  { kicker: "Integrated platform", title: "Choosing the truck", without: "Comparing battery size, motor output and basic specifications individually.", withSany: "Choosing an integrated heavy-duty EV platform where key systems are designed to work together.", image: flatbedTruck.url, imageAlt: "SANY electric heavy-duty flatbed truck", features: ["Battery", "Motor", "Software", "Axle"], icon: RouteIcon },
-  { kicker: "Operating capability", title: "Energy & range", without: "Range anxiety and limited operating flexibility.", withSany: "Battery options up to 462 kWh with certified range up to 315 km.", image: highwayHero.url, imageAlt: "SANY electric truck travelling on a highway", stat: "315 km", statLabel: "Certified range up to", features: ["Up to 462 kWh", "Route ready"], icon: BatteryCharging },
+  { kicker: "Integrated platform", title: "Choosing the truck", without: "Comparing battery size, motor output and basic specifications individually.", withSany: "Choosing an integrated heavy-duty EV platform where key systems are designed to work together.", image: truckLineup.url, imageAlt: "Three SANY electric truck configurations on a mountain road", features: ["Battery", "Motor", "Software", "Axle"], icon: RouteIcon },
+  { kicker: "Operating capability", title: "Energy & range", without: "Range anxiety and limited operating flexibility.", withSany: "Battery options up to 462 kWh with certified range up to 315 km.", image: containerMountain.url, imageAlt: "SANY electric container truck in a mountain landscape", stat: "315 km", statLabel: "Certified range up to", features: ["Up to 462 kWh", "Route ready"], icon: BatteryCharging },
   { kicker: "Electric architecture", title: "Power delivery", without: "Powertrain components operating as separate systems.", withSany: "SANY motor and electric control working together within the vehicle architecture.", image: cargoTruck.url, imageAlt: "Side profile of SANY electric cargo truck", features: ["Motor", "E-control", "Power path"], icon: Zap },
   { kicker: "Connected intelligence", title: "Vehicle intelligence", without: "Hardware-led vehicle with limited system integration.", withSany: "Patented in-house software coordinating 20+ controller groups.", image: flatbedTruck.url, imageAlt: "SANY electric truck platform", stat: "20+", statLabel: "Controller groups", features: ["VCU", "BMS", "ADAS", "Thermal"], icon: Network },
-  { kicker: "Energy efficiency", title: "Energy recovery", without: "Energy generated during deceleration is not part of a coordinated recovery strategy.", withSany: "5-level braking energy regeneration helps recover energy during deceleration.", image: highwayDistant.url, imageAlt: "SANY electric truck driving through mountain landscape", stat: "5 levels", statLabel: "Braking regeneration", features: ["Wheels", "Motor", "Battery"], icon: Gauge },
+  { kicker: "Energy efficiency", title: "Energy recovery", without: "Energy generated during deceleration is not part of a coordinated recovery strategy.", withSany: "5-level braking energy regeneration helps recover energy during deceleration.", image: regenerativeBraking.url, imageAlt: "SANY electric tractor demonstrating controlled braking", stat: "5 levels", statLabel: "Braking regeneration", features: ["Wheels", "Motor", "Battery"], icon: Gauge },
   { kicker: "Driver awareness", title: "Driver visibility", without: "Greater dependence on mirrors and direct driver judgement.", withSany: "360° Surround View Camera and ADAS support driver awareness.", image: tipperTruck.url, imageAlt: "Three-quarter view of SANY electric tipper truck", stat: "360°", statLabel: "Surround view", features: ["FCW", "LDW", "Camera"], icon: Eye },
   { kicker: "Cabin & control", title: "Driver environment", without: "A functional cabin focused primarily on basic vehicle operation.", withSany: "Digital cluster, infotainment, driver-centric controls and adjustable driver seating.", image: cockpit.url, imageAlt: "SANY electric truck digital cockpit", features: ["Digital cluster", "Infotainment", "Driver controls", "Adjustable seat"], icon: ShieldCheck },
   { kicker: "Built for duty", title: "Heavy-duty driveline", without: "Standard driveline architecture.", withSany: "Heavy-duty rear axle featuring hub-reduction technology.", image: loadedTruck.url, imageAlt: "Loaded SANY electric heavy-duty truck", features: ["Rear axle", "Hub reduction", "Heavy duty"], icon: Cpu },
-  { kicker: "Charging standard", title: "Charging", without: "Different charging approaches across vehicles and systems.", withSany: "CCS2 charging interface across the SANY HDT range.", image: tipperTruck.url, imageAlt: "SANY heavy-duty electric truck", stat: "CCS2", statLabel: "Charging interface", features: ["5538E", "5550E", "5565E"], icon: Cable },
+  { kicker: "Charging standard", title: "Charging", without: "Different charging approaches across vehicles and systems.", withSany: "CCS2 charging interface across the SANY HDT range.", image: dcCharging.url, imageAlt: "SANY electric container truck connected to a DC charger", stat: "CCS2", statLabel: "Charging interface", features: ["5538E", "5550E", "5565E"], icon: Cable },
   { kicker: "One ecosystem", title: "Fleet confidence", without: "Multiple technologies from disconnected sources, managed as individual systems.", withSany: "Software, battery, motor, control and axle engineered within the SANY ecosystem.", image: flatbedTruck.url, imageAlt: "Complete SANY heavy-duty electric truck", features: ["Battery", "Motor", "Software", "Control", "Axle"], icon: Check },
 ];
 
@@ -76,7 +80,7 @@ function Header() {
   return (
     <header className="site-header">
       <div className="utility-bar">
-        <a href="#top" className="sany-logo" aria-label="SANY electric trucks home">SANY</a>
+        <a href="#top" className="sany-logo" aria-label="SANY electric trucks home"><img src={sanyLogo.url} alt="SANY" /></a>
         <div className="utility-actions">
           <span><Phone size={16} /> Electric trucks for India</span>
           <Button onClick={scrollToQuote}>Get a Quote</Button>
@@ -179,7 +183,7 @@ function Index() {
         <QuoteForm />
       </section>
 
-      <footer><a href="#top" className="sany-logo">SANY</a><p>Product information shown is based on the supplied campaign brief. Specifications may vary by model and configuration.</p><a href="https://www.sany.in/" target="_blank" rel="noreferrer">Visit SANY India <ArrowRight size={14} /></a></footer>
+      <footer><a href="#top" className="sany-logo" aria-label="Back to top"><img src={sanyLogo.url} alt="SANY" /></a><p>Product information shown is based on the supplied campaign brief. Specifications may vary by model and configuration.</p><a href="https://www.sany.in/" target="_blank" rel="noreferrer">Visit SANY India <ArrowRight size={14} /></a></footer>
     </main>
   );
 }
