@@ -21,7 +21,6 @@ import {
 import { Button } from "@/components/ui/button";
 import cargoTruck from "@/assets/sany-cargo-truck.jpeg.asset.json";
 import flatbedTruck from "@/assets/sany-flatbed-truck.png.asset.json";
-import highwayDistant from "@/assets/sany-highway-distant.png.asset.json";
 import highwayHero from "@/assets/sany-highway-hero.png.asset.json";
 import cockpit from "@/assets/sany-cockpit.webp.asset.json";
 import loadedTruck from "@/assets/sany-loaded-truck.webp.asset.json";
