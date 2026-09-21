@@ -6,3 +6,4 @@
 - [x] Apply SANY typography, palette, metadata, and motion
 - [x] Verify desktop and mobile presentation and interactions
 - [x] Place new campaign images, apply official SANY branding, and add premium interactions
+- [x] Match the live SANY logo treatment and correct every truck image crop
